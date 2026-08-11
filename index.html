@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR" style="margin:0;padding:0;overflow-x:hidden;">
+<html style="margin:0;padding:0;">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>O Segredo dos Arquétipos Femininos</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+(function(){
+  var s = document.createElement('style');
+  s.textContent = `
     :root{
       --bg:#1a0a14;
       --bg2:#2d1420;
@@ -23,315 +24,220 @@
       --border:rgba(212,175,55,.25);
       --border2:rgba(212,175,55,.12);
     }
-    *, *::before, *::after {
-      box-sizing: border-box;
-      overflow-wrap: break-word;
-    }
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      max-width: 100vw;
-      overflow-x: hidden;
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Source Sans 3', sans-serif;
-      -webkit-text-size-adjust: 100%;
-      text-size-adjust: 100%;
-    }
-    .font-serif { font-family: 'Cormorant Garamond', serif; }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;width:100%;overflow-x:hidden}
+    body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+    .font-serif{font-family:'Cormorant Garamond',serif}
     
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      animation: fadeUp .7s ease forwards;
-    }
-    .reveal:nth-child(2){ animation-delay: .12s; }
-    .reveal:nth-child(3){ animation-delay: .24s; }
-    .reveal:nth-child(4){ animation-delay: .36s; }
-    .reveal:nth-child(5){ animation-delay: .48s; }
-    .reveal:nth-child(6){ animation-delay: .6s; }
-    .reveal:nth-child(7){ animation-delay: .72s; }
+    .reveal{opacity:0;transform:translateY(24px);animation:fadeUp .7s ease forwards}
+    .reveal:nth-child(2){animation-delay:.12s}
+    .reveal:nth-child(3){animation-delay:.24s}
+    .reveal:nth-child(4){animation-delay:.36s}
+    .reveal:nth-child(5){animation-delay:.48s}
+    .reveal:nth-child(6){animation-delay:.6s}
+    .reveal:nth-child(7){animation-delay:.72s}
     
-    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
-    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-    @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 20px rgba(212,175,55,.3), 0 0 40px rgba(212,175,55,.1); } 50% { box-shadow: 0 0 30px rgba(212,175,55,.5), 0 0 60px rgba(212,175,55,.2); } }
-    @keyframes sparkle { 0%, 100% { opacity: .3; transform: scale(1); } 50% { opacity: 1; transform: scale(1.2); } }
+    @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+    @keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes pulse-glow{0%,100%{box-shadow:0 0 20px rgba(212,175,55,.3),0 0 40px rgba(212,175,55,.1)}50%{box-shadow:0 0 30px rgba(212,175,55,.5),0 0 60px rgba(212,175,55,.2)}}
+    @keyframes sparkle{0%,100%{opacity:.3;transform:scale(1)}50%{opacity:1;transform:scale(1.2)}}
     
-    .shimmer-text {
-      background: linear-gradient(90deg, #d4af37 0%, #fff5cc 25%, #d4af37 50%, #fff5cc 75%, #d4af37 100%);
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      animation: shimmer 3s linear infinite;
+    .shimmer-text{
+      background:linear-gradient(90deg,#d4af37 0%,#fff5cc 25%,#d4af37 50%,#fff5cc 75%,#d4af37 100%);
+      background-size:200% auto;
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+      animation:shimmer 3s linear infinite;
     }
-    .card-hover { transition: all .4s cubic-bezier(.25,.46,.45,.94); }
-    @media (min-width: 641px) {
-      .card-hover:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 20px 50px rgba(212,175,55,.2), 0 0 0 1px rgba(212,175,55,.4); }
+    .card-hover{transition:all .4s cubic-bezier(.25,.46,.45,.94)}
+    .card-hover:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 20px 50px rgba(212,175,55,.2),0 0 0 1px rgba(212,175,55,.4)}
+    .btn-cta{
+      background:linear-gradient(135deg,#d4af37,#b8941f);
+      color:#1a0a14;font-weight:700;font-size:18px;
+      padding:18px 48px;border-radius:50px;border:none;cursor:pointer;
+      transition:all .3s ease;letter-spacing:.5px;text-decoration:none;display:inline-block;
+      box-shadow:0 4px 20px rgba(212,175,55,.4);
+      animation:pulse-glow 2.5s ease-in-out infinite;
     }
-    .btn-cta {
-      background: linear-gradient(135deg, #d4af37, #b8941f);
-      color: #1a0a14;
-      font-weight: 700;
-      font-size: 18px;
-      padding: 18px 36px;
-      border-radius: 50px;
-      border: none;
-      cursor: pointer;
-      transition: all .3s ease;
-      letter-spacing: .5px;
-      text-decoration: none;
-      display: inline-block;
-      text-align: center;
-      max-width: 100%;
-      box-shadow: 0 4px 20px rgba(212,175,55,.4);
-      animation: pulse-glow 2.5s ease-in-out infinite;
+    .btn-cta:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 8px 30px rgba(212,175,55,.6)}
+    .ornament-line{
+      height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);
     }
-    .btn-cta:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 8px 30px rgba(212,175,55,.6); }
-    .ornament-line {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    .mystery-card{
+      background:linear-gradient(145deg,var(--card),var(--card2));
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:28px 24px;
+      position:relative;overflow:hidden;
     }
-    .mystery-card {
-      background: linear-gradient(145deg, var(--card), var(--card2));
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px 24px;
-      position: relative;
-      overflow: hidden;
-      width: 100%;
+    .mystery-card::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:3px;
+      background:linear-gradient(90deg,var(--accent2),var(--accent),var(--accent2));
     }
-    .mystery-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, var(--accent2), var(--accent), var(--accent2));
+    .mystery-number{
+      font-family:'Cormorant Garamond',serif;
+      font-size:72px;font-weight:700;line-height:1;
+      background:linear-gradient(135deg,var(--accent),transparent);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+      opacity:.5;position:absolute;top:15px;right:20px;
     }
-    .mystery-number {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 64px;
-      font-weight: 700;
-      line-height: 1;
-      background: linear-gradient(135deg, var(--accent), transparent);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      opacity: .4;
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      pointer-events: none;
+    .mystery-icon{
+      width:56px;height:56px;border-radius:50%;
+      background:linear-gradient(135deg,var(--accent-soft),var(--accent2-soft));
+      display:flex;align-items:center;justify-content:center;
+      margin-bottom:18px;border:1px solid var(--border);
     }
-    .mystery-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent-soft), var(--accent2-soft));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 18px;
-      border: 1px solid var(--border);
+    .hidden-name{
+      display:inline-block;
+      background:linear-gradient(90deg,var(--accent),var(--accent2));
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+      font-weight:700;
+      filter:blur(3px);
+      user-select:none;
+      transition:filter .3s ease;
     }
-    .hidden-name {
-      display: inline-block;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      font-weight: 700;
-      filter: blur(3px);
-      user-select: none;
-      transition: filter .3s ease;
+    .mystery-card:hover .hidden-name{filter:blur(2px);opacity:.7}
+    .simbolo-card{
+      background:linear-gradient(145deg,var(--card),var(--card2));
+      border:1px solid var(--border);
+      border-radius:20px;padding:32px 24px;text-align:center;
+      transition:all .4s ease;position:relative;overflow:hidden;
     }
-    .mystery-card:hover .hidden-name { filter: blur(2px); opacity: .7; }
-    .simbolo-card {
-      background: linear-gradient(145deg, var(--card), var(--card2));
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 28px 20px;
-      text-align: center;
-      transition: all .4s ease;
-      position: relative;
-      overflow: hidden;
-      width: 100%;
+    .simbolo-card:hover{transform:translateY(-5px);border-color:var(--accent);box-shadow:0 15px 40px rgba(212,175,55,.15)}
+    .simbolo-hidden{
+      font-size:48px;font-weight:700;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+      filter:blur(4px);user-select:none;line-height:1;margin-bottom:12px;
     }
-    .simbolo-card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 15px 40px rgba(212,175,55,.15); }
-    .simbolo-hidden {
-      font-size: 44px;
-      font-weight: 700;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      filter: blur(4px);
-      user-select: none;
-      line-height: 1;
-      margin-bottom: 12px;
-    }
-    .hero-bg {
+    .hero-bg{
       background:
-        radial-gradient(ellipse at 20% 10%, rgba(155,28,63,.35) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 30%, rgba(212,175,55,.2) 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 90%, rgba(155,28,63,.25) 0%, transparent 50%),
-        linear-gradient(180deg, #1a0a14 0%, #2d1420 50%, #1a0a14 100%);
+        radial-gradient(ellipse at 20% 10%,rgba(155,28,63,.35) 0%,transparent 50%),
+        radial-gradient(ellipse at 80% 30%,rgba(212,175,55,.2) 0%,transparent 50%),
+        radial-gradient(ellipse at 50% 90%,rgba(155,28,63,.25) 0%,transparent 50%),
+        linear-gradient(180deg,#1a0a14 0%,#2d1420 50%,#1a0a14 100%);
     }
-    .section-bg-alt {
+    .section-bg-alt{
       background:
-        radial-gradient(ellipse at 80% 50%, rgba(212,175,55,.08) 0%, transparent 60%),
-        linear-gradient(180deg, var(--bg), var(--bg2), var(--bg));
+        radial-gradient(ellipse at 80% 50%,rgba(212,175,55,.08) 0%,transparent 60%),
+        linear-gradient(180deg,var(--bg),var(--bg2),var(--bg));
     }
-    .price-tag {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--accent2), #7a1530);
-      color: #fff8ec;
-      padding: 6px 18px;
-      border-radius: 30px;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      max-width: 100%;
+    .price-tag{
+      display:inline-block;
+      background:linear-gradient(135deg,var(--accent2),#7a1530);
+      color:#fff8ec;padding:6px 20px;border-radius:30px;
+      font-size:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
     }
-    .check-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
+    .check-item{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px}
+    .check-icon{
+      flex-shrink:0;width:24px;height:24px;border-radius:50%;
+      background:var(--accent-soft);display:flex;align-items:center;justify-content:center;
+      color:var(--accent);font-weight:700;font-size:14px;margin-top:2px;
     }
-    .check-icon {
-      flex-shrink: 0;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: var(--accent-soft);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 14px;
-      margin-top: 2px;
+    .sparkle{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--accent);animation:sparkle 2s ease-in-out infinite}
+    .floating{animation:float 4s ease-in-out infinite}
+    .divider-ornament{
+      display:flex;align-items:center;justify-content:center;gap:16px;margin:20px 0;
     }
-    .sparkle { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: sparkle 2s ease-in-out infinite; }
-    .floating { animation: float 4s ease-in-out infinite; }
-    .divider-ornament {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      margin: 20px 0;
+    .divider-ornament .line{flex:1;max-width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+    .teaser-badge{
+      display:inline-block;padding:4px 14px;border-radius:20px;
+      background:var(--accent2-soft);color:var(--accent);
+      font-size:11px;letter-spacing:1.5px;text-transform:uppercase;
+      border:1px solid var(--border);margin-bottom:12px;
     }
-    .divider-ornament .line { flex: 1; max-width: 120px; height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); }
-    .teaser-badge {
-      display: inline-block;
-      padding: 4px 12px;
-      border-radius: 20px;
-      background: var(--accent2-soft);
-      color: var(--accent);
-      font-size: 11px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      border: 1px solid var(--border);
-      margin-bottom: 12px;
+    .curiosity-text{
+      font-style:italic;color:var(--muted);
+      border-left:2px solid var(--accent);
+      padding-left:16px;margin-top:12px;
     }
-    .curiosity-text {
-      font-style: italic;
-      color: var(--muted);
-      border-left: 2px solid var(--accent);
-      padding-left: 12px;
-      margin-top: 12px;
-      font-size: 14px;
+    .hero-image{
+      margin-top:36px;
+      border-radius:20px;
+      max-width:100%;
+      width:100%;
+      height:auto;
+      border:2px solid var(--accent);
+      box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 40px rgba(212,175,55,.15);
     }
-    .hero-image {
-      margin-top: 28px;
-      border-radius: 16px;
-      max-width: 100%;
-      width: 100%;
-      height: auto;
-      display: block;
-      border: 2px solid var(--accent);
-      box-shadow: 0 15px 40px rgba(0,0,0,.5), 0 0 30px rgba(212,175,55,.15);
+    .arquetipos-image{
+      margin-top:20px;
+      margin-bottom:30px;
+      border-radius:16px;
+      max-width:100%;
+      width:100%;
+      height:auto;
+      border:1px solid var(--border);
+      box-shadow:0 15px 40px rgba(0,0,0,.4);
     }
-    .arquetipos-image {
-      margin-top: 20px;
-      margin-bottom: 24px;
-      border-radius: 14px;
-      max-width: 100%;
-      width: 100%;
-      height: auto;
-      display: block;
-      border: 1px solid var(--border);
-      box-shadow: 0 12px 30px rgba(0,0,0,.4);
+    
+    /* ===== AJUSTES ESPECÍFICOS PARA CELULAR ===== */
+    @media (max-width: 640px){
+      .hero-bg{padding:50px 16px 70px !important}
+      section{padding-left:16px !important;padding-right:16px !important}
+      .price-tag{font-size:12px;padding:5px 16px}
+      h1.font-serif{font-size:34px !important;line-height:1.15 !important}
+      h2.font-serif{font-size:26px !important;line-height:1.2 !important}
+      .font-serif.italic{font-size:20px !important}
+      p{font-size:16px !important;line-height:1.7 !important}
+      .mystery-card{padding:24px 20px}
+      .mystery-number{font-size:56px}
+      .mystery-card h3{font-size:22px !important}
+      .btn-cta{font-size:16px !important;padding:16px 32px !important;width:100%;max-width:320px;text-align:center}
+      .simbolo-card{padding:24px 18px}
+      .simbolo-hidden{font-size:40px}
+      .check-item{padding:14px 16px !important}
+      .divider-ornament .line{max-width:60px}
+      .hero-image{margin-top:24px;border-radius:14px}
+      .arquetipos-image{border-radius:12px}
+      .mystery-icon{width:48px;height:48px}
     }
+  `;
+  document.head.appendChild(s);
+})();
+</script>
 
-    /* ===== AJUSTES ESPECÍFICOS PARA DISPOSITIVOS MÓVEIS ===== */
-    @media (max-width: 640px) {
-      .hero-bg { padding: 40px 16px 50px !important; }
-      section { padding-left: 16px !important; padding-right: 16px !important; padding-top: 50px !important; padding-bottom: 50px !important; }
-      .price-tag { font-size: 11px; padding: 6px 14px; }
-      h1.font-serif { font-size: 32px !important; line-height: 1.15 !important; }
-      h2.font-serif { font-size: 26px !important; line-height: 1.2 !important; }
-      .font-serif.italic { font-size: 19px !important; }
-      p { font-size: 15px !important; line-height: 1.6 !important; }
-      .mystery-card { padding: 20px 16px; }
-      .mystery-number { font-size: 48px; top: 10px; right: 12px; }
-      .mystery-card h3 { font-size: 20px !important; }
-      .btn-cta { font-size: 16px !important; padding: 16px 20px !important; width: 100%; display: block; }
-      .simbolo-card { padding: 20px 16px; }
-      .simbolo-hidden { font-size: 36px; }
-      .check-item { padding: 14px 16px !important; }
-      .divider-ornament .line { max-width: 50px; }
-      .hero-image { margin-top: 20px; border-radius: 12px; }
-      .arquetipos-image { border-radius: 10px; }
-      .mystery-icon { width: 44px; height: 44px; margin-bottom: 14px; }
-      .card-grid-custom { grid-template-columns: 1fr !important; }
-    }
-  </style>
-</head>
-<body>
-
-<div style="min-height:100%;width:100%;max-width:100vw;overflow-x:hidden;">
+<div style="min-height:100%;width:100%;">
   
   <!-- HERO SECTION -->
-  <section class="hero-bg reveal" style="position:relative;padding:70px 20px 80px;overflow:hidden;">
-    <div class="sparkle" style="top:10%;left:5%;animation-delay:0s"></div>
-    <div class="sparkle" style="top:20%;right:8%;animation-delay:.5s"></div>
-    <div class="sparkle" style="top:65%;left:6%;animation-delay:1s"></div>
-    <div class="sparkle" style="top:75%;right:6%;animation-delay:1.5s"></div>
+  <section class="hero-bg reveal" style="position:relative;padding:80px 24px 100px;overflow:hidden;">
+    <div class="sparkle" style="top:15%;left:10%;animation-delay:0s"></div>
+    <div class="sparkle" style="top:25%;right:15%;animation-delay:.5s"></div>
+    <div class="sparkle" style="top:60%;left:8%;animation-delay:1s"></div>
+    <div class="sparkle" style="top:70%;right:10%;animation-delay:1.5s"></div>
+    <div class="sparkle" style="top:40%;left:25%;animation-delay:.8s"></div>
     
     <div style="max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:1;">
-      <div class="price-tag floating" style="margin-bottom:20px;">
+      <div class="price-tag floating" style="margin-bottom:28px;">
         O Segredo Que Poucas Mulheres Sabem
       </div>
       
-      <h1 class="font-serif" style="font-size:clamp(30px,6vw,58px);font-weight:700;line-height:1.15;margin-bottom:16px;color:var(--text2);">
+      <h1 class="font-serif" style="font-size:clamp(34px,7vw,64px);font-weight:700;line-height:1.1;margin-bottom:20px;color:var(--text2);">
         O Segredo dos <span class="shimmer-text">Arquétipos Femininos</span>
       </h1>
       
       <div class="divider-ornament">
         <div class="line"></div>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
           <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z"/>
         </svg>
         <div class="line"></div>
       </div>
       
-      <p class="font-serif" style="font-size:clamp(18px,3.8vw,28px);color:var(--accent);font-weight:600;margin-bottom:20px;font-style:italic;">
+      <p class="font-serif" style="font-size:clamp(20px,4vw,32px);color:var(--accent);font-weight:600;margin-bottom:24px;font-style:italic;">
         Para Magnetismo, Poder Pessoal e Prosperidade
       </p>
       
-      <p style="font-size:clamp(15px,2.5vw,18px);color:var(--muted);max-width:680px;margin:0 auto 28px;line-height:1.65;">
+      <p style="font-size:clamp(16px,2.5vw,18px);color:var(--muted);max-width:680px;margin:0 auto 36px;line-height:1.7;">
         <strong style="color:var(--text2);">7 Arquétipos femininos de poder</strong> que podem transformar sua vida. 
         Descubra quais são eles, aprenda os decretos para ativar energias potentes + 
         <strong style="color:var(--text2);">símbolos de poder</strong> que toda mulher deveria conhecer.
       </p>
       
-      <!-- IMAGEM PRINCIPAL -->
-      <img src="https://p16-flow-image-sign.ibyteimg.com/tos-mya-i-uo7y4d541q/rc_vlm/372e3ba617e24385993b78a8be1962d2.jpg~tplv-0es2k971ck-image.image?rcl=20260812001317FC2B65BC7894B560E4C2&rk3s=8e244e95&rrcfp=935dee89&x-expires=1787069598&x-signature=shoO8ZtBf5rFhr6ZLZY6eb%2B94hA%3D" alt="O Segredo dos Arquétipos Femininos" class="hero-image">
+      <!-- ✅ IMAGEM PRINCIPAL CORRIGIDA: imagem 1.png -->
+      <img src="imagem 1.png" alt="O Segredo dos Arquétipos Femininos" class="hero-image" onerror="this.style.display='none'">
       
-      <div style="margin-top:28px;">
+      <div style="margin-top:36px;">
         <a href="https://pay.kiwify.com.br/DS20x3x" class="btn-cta" target="_blank">
           QUERO DESCOBRIR ESSE SEGREDO
         </a>
@@ -339,45 +245,45 @@
     </div>
   </section>
   
-  <!-- VOCÊ SE IDENTIFICA? -->
-  <section class="reveal" style="padding:60px 20px;background:var(--bg);">
+  <!-- VOCE SE IDENTIFICA? -->
+  <section class="reveal" style="padding:70px 24px;background:var(--bg);">
     <div style="max-width:800px;margin:0 auto;">
-      <div style="text-align:center;margin-bottom:36px;">
-        <p style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;">Faça uma pausa e reflita</p>
-        <h2 class="font-serif" style="font-size:clamp(24px,4.5vw,38px);font-weight:700;color:var(--text2);margin:0;">
+      <div style="text-align:center;margin-bottom:44px;">
+        <p style="font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">Faça uma pausa e reflita</p>
+        <h2 class="font-serif" style="font-size:clamp(26px,5vw,40px);font-weight:700;color:var(--text2);margin:0;">
           Você sente que...
         </h2>
       </div>
       
-      <div class="card-grid-custom" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;">
-        <div class="check-item" style="background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:16px;margin:0;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
+        <div class="check-item" style="background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:18px 20px;margin:0;">
           <div class="check-icon">✦</div>
-          <p style="margin:0;color:var(--muted);line-height:1.5;font-size:15px;">Sua presença passa despercebida onde quer que chegue?</p>
+          <p style="margin:0;color:var(--muted);line-height:1.6;">Sua presença passa despercebida onde quer que chegue?</p>
         </div>
-        <div class="check-item" style="background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:16px;margin:0;">
+        <div class="check-item" style="background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:18px 20px;margin:0;">
           <div class="check-icon">✦</div>
-          <p style="margin:0;color:var(--muted);line-height:1.5;font-size:15px;">A prosperidade parece nunca bater à sua porta?</p>
+          <p style="margin:0;color:var(--muted);line-height:1.6;">A prosperidade parece nunca bater à sua porta?</p>
         </div>
-        <div class="check-item" style="background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:16px;margin:0;">
+        <div class="check-item" style="background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:18px 20px;margin:0;">
           <div class="check-icon">✦</div>
-          <p style="margin:0;color:var(--muted);line-height:1.5;font-size:15px;">Você duvida do seu próprio potencial e poder?</p>
+          <p style="margin:0;color:var(--muted);line-height:1.6;">Você duvida do seu próprio potencial e poder?</p>
         </div>
-        <div class="check-item" style="background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:16px;margin:0;">
+        <div class="check-item" style="background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:18px 20px;margin:0;">
           <div class="check-icon">✦</div>
-          <p style="margin:0;color:var(--muted);line-height:1.5;font-size:15px;">Relações e situações tóxicas sugam sua energia?</p>
+          <p style="margin:0;color:var(--muted);line-height:1.6;">Relações e situações tóxicas sugrem sua energia?</p>
         </div>
-        <div class="check-item" style="background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:16px;margin:0;">
+        <div class="check-item" style="background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:18px 20px;margin:0;">
           <div class="check-icon">✦</div>
-          <p style="margin:0;color:var(--muted);line-height:1.5;font-size:15px;">Sua autoestima está baixa e não se sente notada?</p>
+          <p style="margin:0;color:var(--muted);line-height:1.6;">Sua autoestima está baixa e não se sente notada?</p>
         </div>
-        <div class="check-item" style="background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:16px;margin:0;">
+        <div class="check-item" style="background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:18px 20px;margin:0;">
           <div class="check-icon">✦</div>
-          <p style="margin:0;color:var(--muted);line-height:1.5;font-size:15px;">Deseja resgatar o poder feminino que há em você?</p>
+          <p style="margin:0;color:var(--muted);line-height:1.6;">Deseja resgatar o poder feminino que há em você?</p>
         </div>
       </div>
       
-      <div style="text-align:center;margin-top:32px;padding:20px 16px;background:linear-gradient(135deg,var(--accent2-soft),transparent);border-radius:16px;border:1px solid var(--border);">
-        <p class="font-serif" style="font-size:clamp(17px,3.2vw,21px);color:var(--text2);margin:0;font-style:italic;line-height:1.4;">
+      <div style="text-align:center;margin-top:40px;padding:24px 20px;background:linear-gradient(135deg,var(--accent2-soft),transparent);border-radius:16px;border:1px solid var(--border);">
+        <p class="font-serif" style="font-size:clamp(18px,3.5vw,22px);color:var(--text2);margin:0;font-style:italic;line-height:1.4;">
           E se eu te dissesse que existe um <strong style="color:var(--accent);">caminho ancestral</strong> 
           para reacender tudo isso dentro de você?
         </p>
@@ -386,36 +292,36 @@
   </section>
   
   <!-- OS 7 ARQUETIPOS - MISTERIOSOS -->
-  <section class="section-bg-alt reveal" style="padding:60px 20px;position:relative;">
+  <section class="section-bg-alt reveal" style="padding:70px 24px;position:relative;">
     <div style="max-width:1100px;margin:0 auto;">
-      <div style="text-align:center;margin-bottom:36px;">
-        <p style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;">O Caminho da Transformação</p>
-        <h2 class="font-serif" style="font-size:clamp(24px,4.5vw,42px);font-weight:700;color:var(--text2);margin:0 0 12px;">
+      <div style="text-align:center;margin-bottom:48px;">
+        <p style="font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">O Caminho da Transformação</p>
+        <h2 class="font-serif" style="font-size:clamp(26px,5vw,46px);font-weight:700;color:var(--text2);margin:0 0 16px;">
           Os 7 Arquétipos que Vão <span style="color:var(--accent);">Mudar Sua Vida</span>
         </h2>
-        <div class="ornament-line" style="max-width:180px;margin:0 auto 16px;"></div>
-        <p style="font-size:15px;color:var(--muted);max-width:600px;margin:0 auto;line-height:1.6;">
+        <div class="ornament-line" style="max-width:200px;margin:0 auto 20px;"></div>
+        <p style="font-size:16px;color:var(--muted);max-width:600px;margin:0 auto;line-height:1.7;">
           Cada arquétipo guarda um segredo específico. 
           <strong style="color:var(--text2);">Quais serão eles?</strong> 
           A resposta está dentro do conteúdo completo...
         </p>
       </div>
       
-      <div class="card-grid-custom" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
         
         <div class="mystery-card card-hover">
           <div class="mystery-number">I</div>
           <div style="position:relative;z-index:1;">
             <div class="mystery-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
                 <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z"/>
               </svg>
             </div>
             <span class="teaser-badge">Sedução & Poder</span>
-            <h3 class="font-serif" style="font-size:22px;font-weight:700;color:var(--text2);margin:0 0 6px;">
+            <h3 class="font-serif" style="font-size:24px;font-weight:700;color:var(--text2);margin:0 0 8px;">
               <span class="hidden-name">Arquétipo I</span>
             </h3>
-            <p style="color:var(--muted);line-height:1.5;margin:0;font-size:14px;">
+            <p style="color:var(--muted);line-height:1.6;margin:0;font-size:15px;">
               O arquétipo do <strong style="color:var(--text2);">magnetismo que encanta impérios</strong>. 
               Descubra o segredo e o resgate dessa energia milenar em você.
             </p>
@@ -427,16 +333,16 @@
           <div class="mystery-number">II</div>
           <div style="position:relative;z-index:1;">
             <div class="mystery-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
                 <circle cx="12" cy="12" r="9"/>
                 <path d="M12 3L12 21M3 12L21 12"/>
               </svg>
             </div>
             <span class="teaser-badge">Sabedoria & Estratégia</span>
-            <h3 class="font-serif" style="font-size:22px;font-weight:700;color:var(--text2);margin:0 0 6px;">
+            <h3 class="font-serif" style="font-size:24px;font-weight:700;color:var(--text2);margin:0 0 8px;">
               <span class="hidden-name">Arquétipo II</span>
             </h3>
-            <p style="color:var(--muted);line-height:1.5;margin:0;font-size:14px;">
+            <p style="color:var(--muted);line-height:1.6;margin:0;font-size:15px;">
               O segredo e a sabedoria que <strong style="color:var(--text2);">muda sua vida</strong>. 
               Ative a energia da clareza mental, coragem e visão estratégica.
             </p>
@@ -448,16 +354,16 @@
           <div class="mystery-number">III</div>
           <div style="position:relative;z-index:1;">
             <div class="mystery-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
                 <circle cx="12" cy="12" r="10"/>
                 <path d="M12 6L14 12L20 12L15 16L17 22L12 18L7 22L9 16L4 12L10 12Z"/>
               </svg>
             </div>
             <span class="teaser-badge">Prosperidade & Saúde</span>
-            <h3 class="font-serif" style="font-size:22px;font-weight:700;color:var(--text2);margin:0 0 6px;">
+            <h3 class="font-serif" style="font-size:24px;font-weight:700;color:var(--text2);margin:0 0 8px;">
               <span class="hidden-name">Arquétipo III</span>
             </h3>
-            <p style="color:var(--muted);line-height:1.5;margin:0;font-size:14px;">
+            <p style="color:var(--muted);line-height:1.6;margin:0;font-size:15px;">
               O segredo que transforma sua <strong style="color:var(--text2);">prosperidade, saúde e bem-estar</strong>. 
               A energia da abundância que nutre todas as áreas da vida.
             </p>
@@ -469,16 +375,16 @@
           <div class="mystery-number">IV</div>
           <div style="position:relative;z-index:1;">
             <div class="mystery-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
                 <path d="M12 2L12 20M5 15L12 20L19 15"/>
                 <path d="M6 9L12 3L18 9"/>
               </svg>
             </div>
             <span class="teaser-badge">Liderança & Confiança</span>
-            <h3 class="font-serif" style="font-size:22px;font-weight:700;color:var(--text2);margin:0 0 6px;">
+            <h3 class="font-serif" style="font-size:24px;font-weight:700;color:var(--text2);margin:0 0 8px;">
               <span class="hidden-name">Arquétipo IV</span>
             </h3>
-            <p style="color:var(--muted);line-height:1.5;margin:0;font-size:14px;">
+            <p style="color:var(--muted);line-height:1.6;margin:0;font-size:15px;">
               Recupere o seu poder e <strong style="color:var(--text2);">confie em si mesma</strong>. 
               O arquétipo da paixão ardente e da liderança natural.
             </p>
@@ -490,15 +396,15 @@
           <div class="mystery-number">V</div>
           <div style="position:relative;z-index:1;">
             <div class="mystery-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
                 <path d="M4 4L20 20M20 4L4 20"/>
               </svg>
             </div>
             <span class="teaser-badge">Libertação & Clareza</span>
-            <h3 class="font-serif" style="font-size:22px;font-weight:700;color:var(--text2);margin:0 0 6px;">
+            <h3 class="font-serif" style="font-size:24px;font-weight:700;color:var(--text2);margin:0 0 8px;">
               <span class="hidden-name">Arquétipo V</span>
             </h3>
-            <p style="color:var(--muted);line-height:1.5;margin:0;font-size:14px;">
+            <p style="color:var(--muted);line-height:1.6;margin:0;font-size:15px;">
               Aprenda a <strong style="color:var(--text2);">cortar o que não serve mais</strong>. 
               A energia da verdade, libertação e novos começos.
             </p>
@@ -510,16 +416,16 @@
           <div class="mystery-number">VI</div>
           <div style="position:relative;z-index:1;">
             <div class="mystery-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c41e3a" stroke-width="1.5">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#c41e3a" stroke-width="1.5">
                 <path d="M12 2C12 2 8 6 8 10C8 14 12 16 12 16C12 16 16 14 16 10C16 6 12 2 12 2Z"/>
                 <path d="M12 16L12 22"/>
               </svg>
             </div>
-            <span class="teaser-badge">Magnetismo & Poder</span>
-            <h3 class="font-serif" style="font-size:22px;font-weight:700;color:var(--text2);margin:0 0 6px;">
+            <span class="teaser-badge">Magnetismo & Poder Pessoal</span>
+            <h3 class="font-serif" style="font-size:24px;font-weight:700;color:var(--text2);margin:0 0 8px;">
               <span class="hidden-name">Arquétipo VI</span>
             </h3>
-            <p style="color:var(--muted);line-height:1.5;margin:0;font-size:14px;">
+            <p style="color:var(--muted);line-height:1.6;margin:0;font-size:15px;">
               Puro <strong style="color:var(--text2);">magnetismo e poder pessoal</strong>. 
               O símbolo que desperta a essência feminina mais atraente e inesquecível.
             </p>
@@ -527,276 +433,7 @@
           </div>
         </div>
         
-        <div class="mystery-card card-hover" style="grid-column:1/-1;max-width:600px;margin:0 auto;width:100%;">
+        <div class="mystery-card card-hover" style="grid-column:1/-1;max-width:600px;margin:0 auto;">
           <div class="mystery-number">VII</div>
           <div style="position:relative;z-index:1;">
             <div class="mystery-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
-                <circle cx="12" cy="12" r="3"/>
-                <path d="M12 3C12 3 8 7 8 12C8 17 12 21 12 21C12 21 16 17 16 12C16 7 12 3 12 3Z"/>
-                <circle cx="12" cy="12" r="9" stroke-dasharray="2 4"/>
-              </svg>
-            </div>
-            <span class="teaser-badge">Autoestima & Visibilidade</span>
-            <h3 class="font-serif" style="font-size:22px;font-weight:700;color:var(--text2);margin:0 0 6px;">
-              <span class="hidden-name">Arquétipo VII</span>
-            </h3>
-            <p style="color:var(--muted);line-height:1.5;margin:0;font-size:14px;">
-              Te faz se <strong style="color:var(--text2);">abrir para a vida</strong>, recuperar tua autoestima 
-              e finalmente ser notada. A beleza que se revela ao mundo.
-            </p>
-            <p class="curiosity-text">É hora de abrir suas asas e brilhar...</p>
-          </div>
-        </div>
-        
-      </div>
-      
-      <!-- PERGUNTA + IMAGEM 1 -->
-      <div style="text-align:center;margin-top:36px;">
-        <p class="font-serif" style="font-size:clamp(17px,3.2vw,20px);color:var(--accent);font-style:italic;margin:0 0 16px;">
-          Quais serão esses 7 arquétipos poderosos?
-        </p>
-        <img src="imagem 1.png" alt="Descubra os arquétipos" class="arquetipos-image" onerror="this.style.display='none'">
-        <div style="margin-top:10px;">
-          <a href="https://pay.kiwify.com.br/DS20x3x" class="btn-cta" target="_blank" style="animation:none;">
-            DESCOBRIR AGORA
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- O QUE VOCÊ VAI APRENDER -->
-  <section class="reveal" style="padding:60px 20px;background:var(--bg);">
-    <div style="max-width:900px;margin:0 auto;">
-      <div style="text-align:center;margin-bottom:36px;">
-        <p style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;">Conteúdo Completo</p>
-        <h2 class="font-serif" style="font-size:clamp(24px,4.5vw,38px);font-weight:700;color:var(--text2);margin:0 0 12px;">
-          O Que Você Vai <span style="color:var(--accent);">Descobrir</span>
-        </h2>
-        <div class="ornament-line" style="max-width:160px;margin:0 auto;"></div>
-      </div>
-      
-      <div class="card-grid-custom" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;">
-        <div style="padding:20px 16px;border-left:3px solid var(--accent);background:linear-gradient(90deg,var(--accent-soft),transparent);border-radius:0 12px 12px 0;">
-          <h3 class="font-serif" style="font-size:20px;color:var(--text2);margin:0 0 8px;font-weight:700;">
-            ✦ A Identidade dos Arquétipos
-          </h3>
-          <p style="color:var(--muted);line-height:1.6;margin:0;font-size:14px;">
-            Finalmente descubra <strong style="color:var(--text2);">quais são esses 7 arquétipos femininos</strong> 
-            e entenda por que eles têm o poder de transformar sua vida de forma potente e duradoura.
-          </p>
-        </div>
-        
-        <div style="padding:20px 16px;border-left:3px solid var(--accent2);background:linear-gradient(90deg,var(--accent2-soft),transparent);border-radius:0 12px 12px 0;">
-          <h3 class="font-serif" style="font-size:20px;color:var(--text2);margin:0 0 8px;font-weight:700;">
-            ✦ Como Ativar Cada Energia
-          </h3>
-          <p style="color:var(--muted);line-height:1.6;margin:0;font-size:14px;">
-            Aprenda passo a passo como <strong style="color:var(--text2);">ativar cada energia em sua vida</strong>, 
-            criando alinhamento entre seu ser interior e o mundo exterior.
-          </p>
-        </div>
-        
-        <div style="padding:20px 16px;border-left:3px solid var(--accent);background:linear-gradient(90deg,var(--accent-soft),transparent);border-radius:0 12px 12px 0;">
-          <h3 class="font-serif" style="font-size:20px;color:var(--text2);margin:0 0 8px;font-weight:700;">
-            ✦ Decretos Poderosos
-          </h3>
-          <p style="color:var(--muted);line-height:1.6;margin:0;font-size:14px;">
-            Receba <strong style="color:var(--text2);">decretos de ativação e ancoramento</strong> 
-            especialmente elaborados para potencializar cada arquétipo em sua jornada.
-          </p>
-        </div>
-        
-        <div style="padding:20px 16px;border-left:3px solid var(--accent2);background:linear-gradient(90deg,var(--accent2-soft),transparent);border-radius:0 12px 12px 0;">
-          <h3 class="font-serif" style="font-size:20px;color:var(--text2);margin:0 0 8px;font-weight:700;">
-            ✦ Combinações Mágicas
-          </h3>
-          <p style="color:var(--muted);line-height:1.6;margin:0;font-size:14px;">
-            Descubra como fazer as <strong style="color:var(--text2);">melhores combinações entre os arquétipos</strong> 
-            para criar transformações verdadeiramente poderosas.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- BÔNUS - SÍMBOLOS MISTERIOSOS -->
-  <section class="section-bg-alt reveal" style="padding:60px 20px;position:relative;">
-    <div style="max-width:1000px;margin:0 auto;">
-      <div style="text-align:center;margin-bottom:36px;">
-        <div style="display:inline-block;background:linear-gradient(135deg,var(--accent2),#7a1530);color:#fff;padding:6px 18px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;">
-          Bônus Exclusivo
-        </div>
-        <h2 class="font-serif" style="font-size:clamp(24px,4.5vw,38px);font-weight:700;color:var(--text2);margin:0 0 12px;">
-          Símbolos de Poder Que Toda Mulher Deveria <span style="color:var(--accent);">Conhecer</span>
-        </h2>
-        <p style="color:var(--muted);max-width:600px;margin:0 auto;font-size:15px;line-height:1.6;">
-          Além dos 7 arquétipos, você também descobrirá 
-          <strong style="color:var(--text2);">símbolos ancestrais de poder</strong> 
-          que potencializam ainda mais sua transformação. 
-          <em>Quais serão eles?</em>
-        </p>
-      </div>
-      
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;">
-        <div class="simbolo-card card-hover">
-          <div class="simbolo-hidden">◆</div>
-          <span class="teaser-badge">Prosperidade</span>
-          <h3 class="font-serif" style="font-size:19px;color:var(--text2);margin:0 0 6px;font-weight:700;">
-            <span class="hidden-name">Símbolo I</span>
-          </h3>
-          <p style="color:var(--muted);font-size:13px;line-height:1.5;margin:0;">
-            Clareza, força interior, valor inestimável e <strong>prosperidade cristalina</strong>.
-          </p>
-        </div>
-        
-        <div class="simbolo-card card-hover">
-          <div class="simbolo-hidden">♔</div>
-          <span class="teaser-badge">Autoridade</span>
-          <h3 class="font-serif" style="font-size:19px;color:var(--text2);margin:0 0 6px;font-weight:700;">
-            <span class="hidden-name">Símbolo II</span>
-          </h3>
-          <p style="color:var(--muted);font-size:13px;line-height:1.5;margin:0;">
-            Autoridade, <strong>realeza interior</strong>, liderança e conexão com o divino.
-          </p>
-        </div>
-        
-        <div class="simbolo-card card-hover">
-          <div class="simbolo-hidden">●</div>
-          <span class="teaser-badge">Vitalidade</span>
-          <h3 class="font-serif" style="font-size:19px;color:var(--text2);margin:0 0 6px;font-weight:700;">
-            <span class="hidden-name">Símbolo III</span>
-          </h3>
-          <p style="color:var(--muted);font-size:13px;line-height:1.5;margin:0;">
-            Tentação, conhecimento, <strong>vitalidade e o poder da escolha</strong> consciente.
-          </p>
-        </div>
-        
-        <div class="simbolo-card card-hover">
-          <div class="simbolo-hidden">⚷</div>
-          <span class="teaser-badge">Oportunidades</span>
-          <h3 class="font-serif" style="font-size:19px;color:var(--text2);margin:0 0 6px;font-weight:700;">
-            <span class="hidden-name">Símbolo IV</span>
-          </h3>
-          <p style="color:var(--muted);font-size:13px;line-height:1.5;margin:0;">
-            <strong>Abertura de portas</strong>, acesso a segredos, soluções e novas oportunidades.
-          </p>
-        </div>
-      </div>
-      
-      <div style="text-align:center;margin-top:28px;padding:18px 16px;background:var(--accent-soft);border-radius:14px;border:1px dashed var(--border);max-width:500px;margin-left:auto;margin-right:auto;">
-        <p class="font-serif" style="font-size:17px;color:var(--text2);margin:0;font-style:italic;line-height:1.4;">
-          + <strong style="color:var(--accent);">um símbolo surpresa</strong> revelado apenas dentro do conteúdo completo...
-        </p>
-      </div>
-    </div>
-  </section>
-  
-  <!-- FORMATO DAS AULAS -->
-  <section class="reveal" style="padding:50px 20px;background:var(--bg);">
-    <div style="max-width:800px;margin:0 auto;text-align:center;">
-      <p style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;">Como Funciona</p>
-      <h2 class="font-serif" style="font-size:clamp(22px,4vw,34px);font-weight:700;color:var(--text2);margin:0 0 28px;">
-        Aulas Gravadas &middot; Acesso Imediato
-      </h2>
-      
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-bottom:28px;">
-        <div style="padding:18px 12px;background:var(--card);border:1px solid var(--border);border-radius:14px;">
-          <div style="font-size:32px;color:var(--accent);margin-bottom:6px;font-weight:700;font-family:'Cormorant Garamond',serif;">100%</div>
-          <p style="color:var(--muted);margin:0;font-size:14px;">Online & Gravado</p>
-        </div>
-        <div style="padding:18px 12px;background:var(--card);border:1px solid var(--border);border-radius:14px;">
-          <div style="font-size:32px;color:var(--accent);margin-bottom:6px;font-weight:700;font-family:'Cormorant Garamond',serif;">24h</div>
-          <p style="color:var(--muted);margin:0;font-size:14px;">Acesso Imediato</p>
-        </div>
-        <div style="padding:18px 12px;background:var(--card);border:1px solid var(--border);border-radius:14px;">
-          <div style="font-size:32px;color:var(--accent);margin-bottom:6px;font-weight:700;font-family:'Cormorant Garamond',serif;">∞</div>
-          <p style="color:var(--muted);margin:0;font-size:14px;">Assista Quando Quiser</p>
-        </div>
-      </div>
-      
-      <p style="color:var(--muted);font-size:15px;line-height:1.6;max-width:600px;margin:0 auto;">
-        Você receberá acesso imediato a todas as aulas após a confirmação do pagamento. 
-        Assista no seu ritmo, no conforto da sua casa, quantas vezes precisar, 
-        e <strong style="color:var(--text2);">finalmente descubra todos os segredos</strong>.
-      </p>
-    </div>
-  </section>
-  
-  <!-- OFERTA FINAL -->
-  <section id="oferta" class="reveal" style="padding:60px 16px;position:relative;overflow:hidden;background:
-    radial-gradient(ellipse at 50% 0%,rgba(212,175,55,.15) 0%,transparent 50%),
-    radial-gradient(ellipse at 50% 100%,rgba(155,28,63,.2) 0%,transparent 50%),
-    var(--bg);">
-    
-    <div style="max-width:650px;margin:0 auto;position:relative;z-index:1;">
-      <div style="text-align:center;background:linear-gradient(145deg,var(--card),var(--card2));border:2px solid var(--accent);border-radius:20px;padding:32px 16px;box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 40px rgba(212,175,55,.1);">
-        
-        <div style="display:inline-block;background:var(--accent);color:#1a0a14;padding:6px 18px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;">
-          Não Perca Essa Oportunidade
-        </div>
-        
-        <h2 class="font-serif" style="font-size:clamp(24px,4.5vw,36px);font-weight:700;color:var(--text2);margin:0 0 12px;">
-          Descubra Todos os Segredos
-        </h2>
-        
-        <p style="color:var(--muted);font-size:15px;margin-bottom:20px;line-height:1.5;">
-          7 Arquétipos Misteriosos + Decretos Poderosos + Bônus dos Símbolos de Poder
-        </p>
-        
-        <div class="ornament-line" style="max-width:140px;margin:0 auto 20px;"></div>
-        
-        <p style="color:var(--muted);font-size:15px;margin:0 0 6px;text-decoration:line-through;opacity:.6;">
-          De R$ 297,00
-        </p>
-        <p style="color:var(--accent);font-size:16px;margin:0 0 6px;font-weight:600;">
-          Por apenas
-        </p>
-        
-        <!-- VALOR -->
-        <div class="font-serif" style="font-size:clamp(46px,9vw,60px);font-weight:700;color:var(--text2);line-height:1;margin-bottom:6px;">
-          R$ 127<span style="font-size:clamp(20px,4.5vw,26px);color:var(--muted);">,99</span>
-        </div>
-        <p style="color:var(--muted);font-size:14px;margin:0 0 24px;">
-          ou em até <strong style="color:var(--text2);">12x de R$ 13,24</strong>
-        </p>
-        
-        <a href="https://pay.kiwify.com.br/DS20x3x" class="btn-cta" target="_blank">
-          QUERO DESCOBRIR TUDO AGORA
-        </a>
-        
-        <p style="margin-top:20px;font-size:12px;color:var(--muted);letter-spacing:.5px;">
-          Pagamento 100% seguro &middot; Acesso liberado na hora
-        </p>
-        
-        <p class="font-serif" style="margin-top:20px;font-size:15px;color:var(--accent);font-style:italic;">
-          "A curiosidade é o primeiro passo da transformação..."
-        </p>
-      </div>
-    </div>
-  </section>
-  
-  <!-- FOOTER -->
-  <footer style="padding:32px 16px;background:#0d0509;border-top:1px solid var(--border2);">
-    <div style="max-width:800px;margin:0 auto;text-align:center;">
-      <div class="divider-ornament" style="margin-bottom:16px;">
-        <div class="line"></div>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
-          <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z"/>
-        </svg>
-        <div class="line"></div>
-      </div>
-      <p class="font-serif" style="font-size:16px;color:var(--accent);margin:0 0 8px;font-style:italic;line-height:1.4;">
-        "Uma mulher poderosa é aquela que busca conhecer a si mesma."
-      </p>
-      <p style="color:var(--muted);font-size:11px;margin:16px 0 0;opacity:.7;">
-        © 2026 Arquétipos Femininos de Poder &middot; Todos os direitos reservados
-      </p>
-    </div>
-  </footer>
-  
-</div>
-
-</body>
-</html>
