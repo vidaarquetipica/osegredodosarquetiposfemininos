@@ -1,367 +1,671 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<html style="margin:0;padding:0;">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Segredo dos Arquétipos Femininos | Magnetismo e Prosperidade</title>
-    <meta name="description" content="Descubra os 7 Arquétipos Femininos de Poder para transformar seu magnetismo, poder pessoal e prosperidade. Acesso imediato.">
-    
-    <!-- Fontes Elegantes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Configuração de Cores e Fontes -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'burgundy': '#722F37',
-                        'burgundy-dark': '#5A242B',
-                        'gold': '#D4AF37',
-                        'gold-light': '#F4E4BC',
-                        'rose-soft': '#FDF8F5',
-                        'dark': '#1A1A1A'
-                    },
-                    fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
-                        'sans': ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        * { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; }
-        .font-serif { font-family: 'Playfair Display', serif; }
-        
-        /* Animações Suaves */
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .fade-up { animation: fadeUp 0.8s ease forwards; }
-        
-        @keyframes pulseGold {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
-            50% { box-shadow: 0 0 20px 10px rgba(212, 175, 55, 0.1); }
-        }
-        .btn-pulse { animation: pulseGold 2s infinite; }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .card-hover { transition: all 0.3s ease; }
-        .card-hover:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 20px 40px rgba(114, 47, 55, 0.1);
-        }
-        
-        .divider {
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
-        }
-    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 </head>
-<body class="bg-rose-soft text-dark overflow-x-hidden">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+(function(){
+  var s = document.createElement('style');
+  s.textContent = `
+    :root{
+      --bg:#1a0a14;
+      --bg2:#2d1420;
+      --card:#2a1520;
+      --card2:#351c29;
+      --text:#f5e6d3;
+      --text2:#fff8ec;
+      --muted:#c9b89a;
+      --accent:#d4af37;
+      --accent-soft:rgba(212,175,55,.18);
+      --accent2:#9b1c3f;
+      --accent2-soft:rgba(155,28,63,.2);
+      --accent3:#c41e3a;
+      --border:rgba(212,175,55,.25);
+      --border2:rgba(212,175,55,.12);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;width:100%;overflow-x:hidden}
+    body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+    .font-serif{font-family:'Cormorant Garamond',serif}
+    
+    .reveal{opacity:0;transform:translateY(24px);animation:fadeUp .7s ease forwards}
+    .reveal:nth-child(2){animation-delay:.1s}
+    .reveal:nth-child(3){animation-delay:.2s}
+    .reveal:nth-child(4){animation-delay:.3s}
+    .reveal:nth-child(5){animation-delay:.4s}
+    .reveal:nth-child(6){animation-delay:.5s}
+    .reveal:nth-child(7){animation-delay:.6s}
+    
+    @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+    @keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes pulse-glow{0%,100%{box-shadow:0 0 20px rgba(212,175,55,.3),0 0 40px rgba(212,175,55,.1)}50%{box-shadow:0 0 30px rgba(212,175,55,.5),0 0 60px rgba(212,175,55,.2)}}
+    @keyframes sparkle{0%,100%{opacity:.3;transform:scale(1)}50%{opacity:1;transform:scale(1.2)}}
+    
+    .shimmer-text{
+      background:linear-gradient(90deg,#d4af37 0%,#fff5cc 25%,#d4af37 50%,#fff5cc 75%,#d4af37 100%);
+      background-size:200% auto;
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+      animation:shimmer 3s linear infinite;
+    }
+    .card-hover{transition:all .4s cubic-bezier(.25,.46,.45,.94)}
+    .card-hover:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 20px 50px rgba(212,175,55,.2),0 0 0 1px rgba(212,175,55,.4)}
+    .btn-cta{
+      background:linear-gradient(135deg,#d4af37,#b8941f);
+      color:#1a0a14;font-weight:700;font-size:18px;
+      padding:18px 48px;border-radius:50px;border:none;cursor:pointer;
+      transition:all .3s ease;letter-spacing:.5px;text-decoration:none;display:inline-block;
+      box-shadow:0 4px 20px rgba(212,175,55,.4);
+      animation:pulse-glow 2.5s ease-in-out infinite;
+    }
+    .btn-cta:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 8px 30px rgba(212,175,55,.6)}
+    .ornament-line{height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+    
+    .arquetipo-card{
+      background:linear-gradient(145deg,var(--card),var(--card2));
+      border:1px solid var(--border);
+      border-radius:16px;padding:28px 24px;
+      position:relative;overflow:hidden;
+    }
+    .arquetipo-card::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:3px;
+      background:linear-gradient(90deg,var(--accent2),var(--accent),var(--accent2));
+    }
+    .arquetipo-num{
+      font-family:'Cormorant Garamond',serif;
+      font-size:72px;font-weight:700;line-height:1;
+      background:linear-gradient(135deg,var(--accent),transparent);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+      opacity:.45;position:absolute;top:12px;right:20px;
+    }
+    .arquetipo-icon{
+      width:52px;height:52px;border-radius:50%;
+      background:linear-gradient(135deg,var(--accent-soft),var(--accent2-soft));
+      display:flex;align-items:center;justify-content:center;
+      margin-bottom:16px;border:1px solid var(--border);
+    }
+    .simbolo-card{
+      background:linear-gradient(145deg,var(--card),var(--card2));
+      border:1px solid var(--border);
+      border-radius:20px;padding:32px 24px;text-align:center;
+      transition:all .4s ease;
+    }
+    .simbolo-card:hover{transform:translateY(-5px);border-color:var(--accent);box-shadow:0 15px 40px rgba(212,175,55,.15)}
+    .simbolo-secreto{
+      background:linear-gradient(145deg,#1a0a14,var(--card));
+      border:2px dashed var(--accent);
+      border-radius:20px;padding:32px 24px;text-align:center;
+    }
+    .bonus-badge{
+      display:inline-block;background:linear-gradient(135deg,var(--accent2),#7a1530);
+      color:#fff;padding:6px 20px;border-radius:30px;
+      font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+    }
+    .bonus-tag{
+      display:inline-block;background:var(--accent);color:#1a0a14;
+      padding:3px 12px;border-radius:12px;font-size:11px;
+      font-weight:700;letter-spacing:1px;text-transform:uppercase;
+      margin-bottom:12px;
+    }
+    .hero-bg{
+      background:
+        radial-gradient(ellipse at 20% 10%,rgba(155,28,63,.35) 0%,transparent 50%),
+        radial-gradient(ellipse at 80% 30%,rgba(212,175,55,.2) 0%,transparent 50%),
+        radial-gradient(ellipse at 50% 90%,rgba(155,28,63,.25) 0%,transparent 50%),
+        linear-gradient(180deg,#1a0a14 0%,#2d1420 50%,#1a0a14 100%);
+    }
+    .section-bg-alt{
+      background:
+        radial-gradient(ellipse at 80% 50%,rgba(212,175,55,.08) 0%,transparent 60%),
+        linear-gradient(180deg,var(--bg),var(--bg2),var(--bg));
+    }
+    .price-tag-top{
+      display:inline-block;background:linear-gradient(135deg,var(--accent2),#7a1530);
+      color:#fff8ec;padding:6px 20px;border-radius:30px;
+      font-size:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+    }
+    .check-item{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px}
+    .check-icon{
+      flex-shrink:0;width:24px;height:24px;border-radius:50%;
+      background:var(--accent-soft);display:flex;align-items:center;justify-content:center;
+      color:var(--accent);font-weight:700;font-size:14px;margin-top:2px;
+    }
+    .sparkle{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--accent);animation:sparkle 2s ease-in-out infinite}
+    .floating{animation:float 4s ease-in-out infinite}
+    .divider-ornament{
+      display:flex;align-items:center;justify-content:center;gap:16px;margin:20px 0;
+    }
+    .divider-ornament .line{flex:1;max-width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+    .main-image{
+      margin-top:30px;border-radius:20px;max-width:100%;width:100%;height:auto;
+      border:2px solid var(--accent);
+      box-shadow:0 25px 70px rgba(0,0,0,.5),0 0 50px rgba(212,175,55,.18);
+    }
+    .arquetipos-image{
+      margin-top:16px;margin-bottom:28px;border-radius:16px;
+      max-width:100%;width:100%;height:auto;
+      border:1px solid var(--border);
+      box-shadow:0 15px 40px rgba(0,0,0,.4);
+    }
+    .valor-riscado{color:var(--muted);text-decoration:line-through;opacity:.6}
+    
+    @media (max-width: 640px){
+      section{padding-left:16px !important;padding-right:16px !important}
+      .hero-bg{padding:45px 16px 65px !important}
+      h1.font-serif{font-size:32px !important;line-height:1.15 !important}
+      h2.font-serif{font-size:24px !important;line-height:1.2 !important}
+      h3.font-serif{font-size:20px !important}
+      p{font-size:16px !important;line-height:1.7 !important}
+      .arquetipo-card{padding:22px 18px}
+      .arquetipo-num{font-size:52px}
+      .arquetipo-icon{width:44px;height:44px}
+      .simbolo-card,.simbolo-secreto{padding:24px 18px}
+      .btn-cta{font-size:16px !important;padding:16px 30px !important;width:100%;max-width:320px;text-align:center}
+      .check-item{padding:14px 16px !important}
+      .divider-ornament .line{max-width:50px}
+      .main-image{margin-top:22px;border-radius:14px}
+      .bonus-badge{font-size:11px;padding:5px 16px}
+    }
+  `;
+  document.head.appendChild(s);
+})();
+</script>
 
-    <!-- #################### HERO PRINCIPAL #################### -->
-    <section class="relative min-h-screen flex items-center justify-center py-16 px-4 bg-gradient-to-br from-rose-soft via-white to-gold-light/30">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            
-            <!-- Texto Hero -->
-            <div class="text-center md:text-left fade-up">
-                <p class="text-burgundy font-medium tracking-[0.2em] uppercase text-sm mb-4">
-                    ✦ Transformação Feminina ✦
-                </p>
-                <h1 class="font-serif text-4xl md:text-6xl font-bold leading-tight mb-6 text-dark">
-                    O Segredo dos <span class="text-burgundy">Arquétipos Femininos</span> para 
-                    <span class="gradient-text">Magnetismo e Prosperidade</span> 🌹💎
-                </h1>
-                <p class="text-lg md:text-xl text-gray-700 mb-4 leading-relaxed">
-                    <strong>7 Arquétipos de Poder</strong> para você resgatar seu brilho, aumentar seu poder pessoal e atrair a vida próspera que merece.
-                </p>
-                <p class="text-gray-600 mb-8 text-lg">
-                    Aprenda decretos poderosos, combinações estratégicas e símbolos sagrados para ativar energias que transformam realidades.
-                </p>
-                
-                <a href="#preco" class="inline-block btn-pulse bg-burgundy hover:bg-burgundy-dark text-white font-semibold px-10 py-5 rounded-full text-lg transition-all shadow-xl hover:shadow-2xl">
-                    ✨ QUERO ACESSAR AGORA
-                </a>
-            </div>
+<div style="min-height:100%;width:100%;">
 
-            <!-- Imagem Principal -->
-            <div class="fade-up" style="animation-delay: 0.2s;">
-                <div class="relative">
-                    <div class="absolute -inset-4 bg-gradient-to-r from-gold/20 to-burgundy/10 rounded-3xl blur-xl"></div>
-                    <img 
-                        src="imagem.png" 
-                        alt="O Segredo dos Arquétipos Femininos" 
-                        class="relative w-full h-auto rounded-2xl shadow-2xl object-cover border-4 border-white"
-                        onerror="this.src='https://images.unsplash.com/photo-1529626455594-4ff050306cc0?w=800&q=80'"
-                    >
-                </div>
-            </div>
+<!-- ==============================================
+     1. HERO PRINCIPAL
+     ============================================== -->
+<section class="hero-bg reveal" style="position:relative;padding:70px 24px 90px;overflow:hidden;">
+  <div class="sparkle" style="top:12%;left:8%;animation-delay:0s"></div>
+  <div class="sparkle" style="top:22%;right:12%;animation-delay:.4s"></div>
+  <div class="sparkle" style="top:55%;left:10%;animation-delay:.8s"></div>
+  <div class="sparkle" style="top:65%;right:8%;animation-delay:1.2s"></div>
+  
+  <div style="max-width:880px;margin:0 auto;text-align:center;position:relative;z-index:1;">
+    <div class="price-tag-top floating" style="margin-bottom:26px;">
+      Conteúdo Exclusivo Para Mulheres
+    </div>
+    
+    <h1 class="font-serif" style="font-size:clamp(32px,7vw,62px);font-weight:700;line-height:1.1;margin-bottom:18px;color:var(--text2);">
+      O Segredo dos <span class="shimmer-text">Arquétipos Femininos</span>
+    </h1>
+    
+    <p class="font-serif" style="font-size:clamp(20px,4vw,30px);color:var(--accent);font-weight:600;margin-bottom:10px;font-style:italic;">
+      Para Magnetismo e Prosperidade
+    </p>
+    
+    <div class="divider-ornament">
+      <div class="line"></div>
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+        <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z"/>
+      </svg>
+      <div class="line"></div>
+    </div>
+    
+    <h2 class="font-serif" style="font-size:clamp(22px,4.5vw,34px);font-weight:700;color:var(--text2);margin:0 0 30px;line-height:1.25;">
+      7 Arquétipos femininos de poder<br>para transformar sua vida!
+    </h2>
+    
+    <!-- ✅ IMAGEM PRINCIPAL -->
+    <img src="imagem.png" alt="O Segredo dos Arquétipos Femininos" class="main-image">
+    
+    <p style="font-size:clamp(16px,2.5vw,18px);color:var(--muted);max-width:700px;margin:32px auto 0;line-height:1.75;">
+      Aprenda os <strong style="color:var(--text2);">decretos de poder</strong> para ativar e ancorar as energias de forma potente. 
+      <br class="hidden sm:block">
+      + <strong style="color:var(--text2);">5 símbolos de poder</strong> que toda mulher deve ativar em sua vida.
+    </p>
+    
+    <div style="margin-top:34px;">
+      <a href="https://pay.kiwify.com.br/DS20x3x" class="btn-cta" target="_blank">
+        QUERO TRANSFORMAR MINHA VIDA
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================================
+     2. OS 7 ARQUÉTIPOS DE PODER
+     ============================================== -->
+<section class="section-bg-alt reveal" style="padding:75px 24px;position:relative;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:50px;">
+      <p style="font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">Os 7 Pilares da Transformação</p>
+      <h2 class="font-serif" style="font-size:clamp(26px,5vw,44px);font-weight:700;color:var(--text2);margin:0 0 16px;">
+        Conheça os <span style="color:var(--accent);">7 Arquétipos</span>
+      </h2>
+      <div class="ornament-line" style="max-width:180px;margin:0 auto;"></div>
+    </div>
+    
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
+      
+      <!-- ARQUÉTIPO 1 -->
+      <div class="arquetipo-card card-hover">
+        <div class="arquetipo-num">01</div>
+        <div style="position:relative;z-index:1;">
+          <div class="arquetipo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.6">
+              <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif" style="font-size:22px;font-weight:700;color:var(--accent);margin:0 0 8px;line-height:1.3;">
+            Arquétipo 1
+          </h3>
+          <p style="color:var(--text2);font-weight:600;margin:0 0 10px;font-size:16px;line-height:1.4;">
+            O mais Potente para <strong>Sedução & Poder Pessoal</strong>
+          </p>
+          <p style="color:var(--muted);line-height:1.6;margin:0;font-size:15px;">
+            Desperte o magnetismo que faz você ser notada e desejada onde quer que chegue.
+          </p>
         </div>
-    </section>
-
-    <!-- #################### OS 7 ARQUÉTIPOS #################### -->
-    <section id="arquetipos" class="py-20 px-4 bg-white">
-        <div class="max-w-6xl mx-auto">
-            
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-3xl md:text-5xl font-bold mb-4">
-                    Os 7 <span class="text-burgundy">Arquétipos</span> que Vão Transformar Sua Vida
-                </h2>
-                <div class="divider w-40 mx-auto my-6"></div>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
-                    Cada arquétipo carrega uma frequência única de poder. Juntas, elas formam a chave para sua transformação completa.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Arquétipo 1 -->
-                <div class="card-hover bg-rose-soft p-8 rounded-2xl border border-gold/20">
-                    <div class="w-14 h-14 bg-burgundy text-white rounded-full flex items-center justify-center font-serif text-2xl font-bold mb-5">1</div>
-                    <h3 class="font-serif text-xl font-bold text-burgundy mb-3">Sedução & Poder Pessoal</h3>
-                    <p class="text-gray-600">O arquétipo mais potente para despertar seu magnetismo natural, confiança e presença inesquecível.</p>
-                </div>
-
-                <!-- Arquétipo 2 -->
-                <div class="card-hover bg-rose-soft p-8 rounded-2xl border border-gold/20">
-                    <div class="w-14 h-14 bg-burgundy text-white rounded-full flex items-center justify-center font-serif text-2xl font-bold mb-5">2</div>
-                    <h3 class="font-serif text-xl font-bold text-burgundy mb-3">Sabedoria & Estratégia que Enrriquece</h3>
-                    <p class="text-gray-600">Decisões inteligentes e estratégias certeiras que fazem o dinheiro chegar com consistência.</p>
-                </div>
-
-                <!-- Arquétipo 3 -->
-                <div class="card-hover bg-rose-soft p-8 rounded-2xl border border-gold/20">
-                    <div class="w-14 h-14 bg-burgundy text-white rounded-full flex items-center justify-center font-serif text-2xl font-bold mb-5">3</div>
-                    <h3 class="font-serif text-xl font-bold text-burgundy mb-3">Enriqueça com Leveza & Facilidade</h3>
-                    <p class="text-gray-600">Quebre crenças de esforço excessivo. Ative a energia da abundância que flui sem luta.</p>
-                </div>
-
-                <!-- Arquétipo 4 -->
-                <div class="card-hover bg-rose-soft p-8 rounded-2xl border border-gold/20">
-                    <div class="w-14 h-14 bg-burgundy text-white rounded-full flex items-center justify-center font-serif text-2xl font-bold mb-5">4</div>
-                    <h3 class="font-serif text-xl font-bold text-burgundy mb-3">Liderança & Poder Pessoal</h3>
-                    <p class="text-gray-600">Seja vista, ouvida e respeitada. Assuma o comando da sua vida com autoridade e graça.</p>
-                </div>
-
-                <!-- Arquétipo 5 -->
-                <div class="card-hover bg-rose-soft p-8 rounded-2xl border border-gold/20">
-                    <div class="w-14 h-14 bg-burgundy text-white rounded-full flex items-center justify-center font-serif text-2xl font-bold mb-5">5</div>
-                    <h3 class="font-serif text-xl font-bold text-burgundy mb-3">Libertação & Clareza Mental</h3>
-                    <p class="text-gray-600">Limpeza de padrões antigos, medos e bloqueios que impedem você de avançar.</p>
-                </div>
-
-                <!-- Arquétipo 6 -->
-                <div class="card-hover bg-rose-soft p-8 rounded-2xl border border-gold/20">
-                    <div class="w-14 h-14 bg-burgundy text-white rounded-full flex items-center justify-center font-serif text-2xl font-bold mb-5">6</div>
-                    <h3 class="font-serif text-xl font-bold text-burgundy mb-3">Atração & Encantamento Potente</h3>
-                    <p class="text-gray-600">Um campo energético tão forte que oportunidades, pessoas e riqueza são atraídas até você.</p>
-                </div>
-
-                <!-- Arquétipo 7 (destaque) -->
-                <div class="lg:col-span-3 card-hover bg-gradient-to-br from-burgundy to-burgundy-dark text-white p-8 rounded-2xl shadow-xl">
-                    <div class="flex flex-col md:flex-row items-center gap-6">
-                        <div class="w-16 h-16 bg-gold text-burgundy rounded-full flex items-center justify-center font-serif text-3xl font-bold flex-shrink-0">7</div>
-                        <div>
-                            <h3 class="font-serif text-2xl md:text-3xl font-bold mb-2">✨ Resgate o Seu Brilho de Volta & Volte a Ser Vista</h3>
-                            <p class="text-white/90 text-lg">O arquétipo final que une todos os poderes: você volta a ser a protagonista da sua própria história, radiante e inconfundível.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+      </div>
+      
+      <!-- ARQUÉTIPO 2 -->
+      <div class="arquetipo-card card-hover">
+        <div class="arquetipo-num">02</div>
+        <div style="position:relative;z-index:1;">
+          <div class="arquetipo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.6">
+              <circle cx="12" cy="12" r="9"/><path d="M12 3L12 21M3 12L21 12"/>
+            </svg>
+          </div>
+          <h3 class="font-serif" style="font-size:22px;font-weight:700;color:var(--accent);margin:0 0 8px;line-height:1.3;">
+            Arquétipo 2
+          </h3>
+          <p style="color:var(--text2);font-weight:600;margin:0 0 10px;font-size:16px;line-height:1.4;">
+            <strong>Sabedoria & Estratégia</strong> que Enrriquece
+          </p>
+          <p style="color:var(--muted);line-height:1.6;margin:0;font-size:15px;">
+            Tome decisões certas, no momento certo, com clareza e inteligência estratégica.
+          </p>
         </div>
-    </section>
-
-    <!-- #################### CURIOSIDADE / IMAGEM 1 #################### -->
-    <section class="py-20 px-4 bg-gradient-to-b from-white to-gold-light/30">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="font-serif text-3xl md:text-5xl font-bold mb-6">
-                Quais são esses <span class="gradient-text">Arquétipos Poderosos</span>?
-            </h2>
-            <p class="text-xl text-gray-700 mb-10 max-w-2xl mx-auto">
-                Os nomes e as energias completas são revelados dentro do curso, em detalhes profundos que vão fazer você se reconhecer em cada um deles.
-            </p>
-            
-            <div class="relative max-w-2xl mx-auto mb-10">
-                <div class="absolute -inset-4 bg-burgundy/10 rounded-3xl blur-xl"></div>
-                <img 
-                    src="imagem 1.png" 
-                    alt="Descubra os Arquétipos" 
-                    class="relative w-full rounded-2xl shadow-2xl border-4 border-white"
-                    onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80'"
-                >
-            </div>
-
-            <a href="#preco" class="inline-block bg-dark hover:bg-burgundy text-white font-semibold px-10 py-4 rounded-full text-lg transition-all shadow-lg">
-                🔮 DESCUBRA AGORA
-            </a>
+      </div>
+      
+      <!-- ARQUÉTIPO 3 -->
+      <div class="arquetipo-card card-hover">
+        <div class="arquetipo-num">03</div>
+        <div style="position:relative;z-index:1;">
+          <div class="arquetipo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.6">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6L14 12L20 12L15 16L17 22L12 18L7 22L9 16L4 12L10 12Z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif" style="font-size:22px;font-weight:700;color:var(--accent);margin:0 0 8px;line-height:1.3;">
+            Arquétipo 3
+          </h3>
+          <p style="color:var(--text2);font-weight:600;margin:0 0 10px;font-size:16px;line-height:1.4;">
+            <strong>Enriqueça com Leveza & Facilidade</strong>
+          </p>
+          <p style="color:var(--muted);line-height:1.6;margin:0;font-size:15px;">
+            Atraia prosperidade, abundância e oportunidades sem sofrimento ou luta.
+          </p>
         </div>
-    </section>
-
-    <!-- #################### BÔNUS #################### -->
-    <section id="bonus" class="py-20 px-4 bg-burgundy text-white">
-        <div class="max-w-6xl mx-auto">
-            
-            <div class="text-center mb-16">
-                <span class="bg-gold text-burgundy px-5 py-2 rounded-full text-sm font-bold tracking-wider uppercase">
-                    🎁 BÔNUS EXCLUSIVOS
-                </span>
-                <h2 class="font-serif text-3xl md:text-5xl font-bold mt-6 mb-4">
-                    Presentes que Vão <span class="text-gold">Potencializar</span> Seus Resultados
-                </h2>
-                <p class="text-white/80 text-lg">Você recebe tudo isso GRÁTIS ao se inscrever hoje.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                
-                <!-- Bônus 1 -->
-                <div class="bg-white/10 backdrop-blur p-8 rounded-2xl border border-gold/30">
-                    <h3 class="font-serif text-2xl font-bold text-gold mb-6">
-                        Bônus 1: Símbolos de Poder ✦
-                    </h3>
-                    <p class="mb-6 text-white/90">
-                        Símbolos premium que toda mulher deveria ativar em sua vida para abrir caminhos de prosperidade e proteção:
-                    </p>
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-                        <div class="bg-white/5 p-4 rounded-xl">
-                            <div class="text-4xl mb-2">💎</div>
-                            <p class="text-sm font-medium">Diamante</p>
-                        </div>
-                        <div class="bg-white/5 p-4 rounded-xl">
-                            <div class="text-4xl mb-2">👑</div>
-                            <p class="text-sm font-medium">Coroa</p>
-                        </div>
-                        <div class="bg-white/5 p-4 rounded-xl">
-                            <div class="text-4xl mb-2">🍎</div>
-                            <p class="text-sm font-medium">Maçã Vermelha</p>
-                        </div>
-                        <div class="bg-white/5 p-4 rounded-xl">
-                            <div class="text-4xl mb-2">🗝️</div>
-                            <p class="text-sm font-medium">A Chave</p>
-                        </div>
-                    </div>
-                    <p class="mt-6 text-gold font-semibold italic">
-                        + O 5º Símbolo Secreto... 🤫 Você descobre o que é e como ativar DENTRO do curso!
-                    </p>
-                </div>
-
-                <!-- Bônus 2 -->
-                <div class="bg-white/10 backdrop-blur p-8 rounded-2xl border border-gold/30">
-                    <h3 class="font-serif text-2xl font-bold text-gold mb-6">
-                        Bônus 2: Ancoramento Arquetípico ⚡
-                    </h3>
-                    <p class="text-white/90 mb-4">
-                        Um guia passo a passo prático que ensina você a <strong>potencializar QUALQUER arquétipo</strong> em sua vida, na ordem e na frequência certa.
-                    </p>
-                    <ul class="space-y-3 text-white/90">
-                        <li>✓ Como preparar seu campo energético</li>
-                        <li>✓ O momento exato para ativar cada energia</li>
-                        <li>✓ Erros comuns que bloqueiam o poder</li>
-                        <li>✓ Rotina simples de ancoragem diária</li>
-                    </ul>
-                </div>
-
-            </div>
+      </div>
+      
+      <!-- ARQUÉTIPO 4 -->
+      <div class="arquetipo-card card-hover">
+        <div class="arquetipo-num">04</div>
+        <div style="position:relative;z-index:1;">
+          <div class="arquetipo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.6">
+              <path d="M12 2L12 20M5 15L12 20L19 15"/><path d="M6 9L12 3L18 9"/>
+            </svg>
+          </div>
+          <h3 class="font-serif" style="font-size:22px;font-weight:700;color:var(--accent);margin:0 0 8px;line-height:1.3;">
+            Arquétipo 4
+          </h3>
+          <p style="color:var(--text2);font-weight:600;margin:0 0 10px;font-size:16px;line-height:1.4;">
+            <strong>Liderança & Poder Pessoal</strong>
+          </p>
+          <p style="color:var(--muted);line-height:1.6;margin:0;font-size:15px;">
+            Assuma o comando da sua vida, confie em si mesma e inspire outras mulheres.
+          </p>
         </div>
-    </section>
-
-    <!-- #################### O QUE VOCÊ VAI APRENDER #################### -->
-    <section class="py-20 px-4 bg-white">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-12">
-                Tudo isso incluso no <span class="text-burgundy">Seu Acesso Imediato</span>
-            </h2>
-
-            <div class="space-y-5 text-lg">
-                <div class="flex items-start gap-4 p-5 bg-rose-soft rounded-xl">
-                    <span class="text-gold text-2xl flex-shrink-0">✓</span>
-                    <p><strong>Aulas gravadas 100% online</strong> — assista quando e quantas vezes quiser, no seu ritmo.</p>
-                </div>
-                <div class="flex items-start gap-4 p-5 bg-rose-soft rounded-xl">
-                    <span class="text-gold text-2xl flex-shrink-0">✓</span>
-                    <p>O estudo profundo dos <strong>7 Arquétipos Femininos</strong> e por que eles transformam vidas de forma potente.</p>
-                </div>
-                <div class="flex items-start gap-4 p-5 bg-rose-soft rounded-xl">
-                    <span class="text-gold text-2xl flex-shrink-0">✓</span>
-                    <p>Como <strong>ativar as energias</strong> corretamente em sua vida cotidiana, sem complicações.</p>
-                </div>
-                <div class="flex items-start gap-4 p-5 bg-rose-soft rounded-xl">
-                    <span class="text-gold text-2xl flex-shrink-0">✓</span>
-                    <p><strong>Decretos poderosos</strong> de ativação e ancoragem para usar em qualquer momento.</p>
-                </div>
-                <div class="flex items-start gap-4 p-5 bg-rose-soft rounded-xl">
-                    <span class="text-gold text-2xl flex-shrink-0">✓</span>
-                    <p>A arte de fazer a <strong>melhor combinação dos arquétipos</strong> para transformar áreas específicas da sua vida (amor, carreira, dinheiro).</p>
-                </div>
-            </div>
+      </div>
+      
+      <!-- ARQUÉTIPO 5 -->
+      <div class="arquetipo-card card-hover">
+        <div class="arquetipo-num">05</div>
+        <div style="position:relative;z-index:1;">
+          <div class="arquetipo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.6">
+              <path d="M4 4L20 20M20 4L4 20"/>
+            </svg>
+          </div>
+          <h3 class="font-serif" style="font-size:22px;font-weight:700;color:var(--accent);margin:0 0 8px;line-height:1.3;">
+            Arquétipo 5
+          </h3>
+          <p style="color:var(--text2);font-weight:600;margin:0 0 10px;font-size:16px;line-height:1.4;">
+            <strong>Libertação & Clareza Mental</strong>
+          </p>
+          <p style="color:var(--muted);line-height:1.6;margin:0;font-size:15px;">
+            Corte tudo o que não serve, limpe crenças limitantes e abra espaço para o novo.
+          </p>
         </div>
-    </section>
-
-    <!-- #################### PREÇO E CTA FINAL #################### -->
-    <section id="preco" class="py-20 px-4 bg-gradient-to-br from-dark via-burgundy-dark to-burgundy text-white">
-        <div class="max-w-3xl mx-auto text-center">
-            
-            <p class="text-gold tracking-widest uppercase text-sm mb-4">Sua Transformação Começa Hoje</p>
-            <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">
-                Acesso Completo + Todos os Bônus
-            </h2>
-            <p class="text-white/80 text-lg mb-10">
-                Um investimento pequeno para uma vida inteira de poder, magnetismo e prosperidade.
-            </p>
-
-            <!-- Caixa de Preço -->
-            <div class="bg-white text-dark rounded-3xl p-10 shadow-2xl mb-10 relative">
-                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-burgundy px-6 py-1 rounded-full font-bold text-sm uppercase tracking-wider">
-                    🔥 Oferta Especial
-                </div>
-                
-                <p class="text-gray-500 line-through text-xl mb-2">De R$ 247,00</p>
-                <p class="text-burgundy font-serif text-6xl md:text-7xl font-black mb-2">
-                    R$ 127<small class="text-3xl">,90</small>
-                </p>
-                <p class="text-gray-600 text-lg mb-6">ou em até <strong>12x de R$ 13,24</strong> no cartão</p>
-                
-                <div class="divider my-6"></div>
-
-                <a 
-                    href="https://pay.kiwify.com.br/DS20x3x" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    class="block w-full btn-pulse bg-gradient-to-r from-burgundy to-burgundy-dark hover:from-burgundy-dark hover:to-burgundy text-white font-bold py-6 rounded-2xl text-xl transition-all shadow-xl uppercase tracking-wide"
-                >
-                    💳 GARANTIR MEU ACESSO AGORA
-                </a>
-                
-                <p class="text-gray-500 text-sm mt-5">🔒 Pagamento 100% seguro · Acesso liberado imediatamente após a confirmação</p>
-            </div>
-
-            <p class="text-white/70 text-sm">
-                Ao clicar no botão, você será redirecionada para o checkout seguro da Kiwify.
-            </p>
+      </div>
+      
+      <!-- ARQUÉTIPO 6 -->
+      <div class="arquetipo-card card-hover">
+        <div class="arquetipo-num">06</div>
+        <div style="position:relative;z-index:1;">
+          <div class="arquetipo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c41e3a" stroke-width="1.6">
+              <path d="M12 2C12 2 8 6 8 10C8 14 12 16 12 16C12 16 16 14 16 10C16 6 12 2 12 2Z"/>
+              <path d="M12 16L12 22"/>
+            </svg>
+          </div>
+          <h3 class="font-serif" style="font-size:22px;font-weight:700;color:var(--accent);margin:0 0 8px;line-height:1.3;">
+            Arquétipo 6
+          </h3>
+          <p style="color:var(--text2);font-weight:600;margin:0 0 10px;font-size:16px;line-height:1.4;">
+            <strong>Forte Atração & Encantamento</strong> potente
+          </p>
+          <p style="color:var(--muted);line-height:1.6;margin:0;font-size:15px;">
+            Torne-se inesquecível, desperte encantamento e atraia o que deseja com poder.
+          </p>
         </div>
-    </section>
+      </div>
+      
+      <!-- ARQUÉTIPO 7 -->
+      <div class="arquetipo-card card-hover" style="grid-column:1/-1;max-width:600px;margin:0 auto;">
+        <div class="arquetipo-num">07</div>
+        <div style="position:relative;z-index:1;">
+          <div class="arquetipo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.6">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 3C12 3 8 7 8 12C8 17 12 21 12 21C12 21 16 17 16 12C16 7 12 3 12 3Z"/>
+              <circle cx="12" cy="12" r="9" stroke-dasharray="2 4"/>
+            </svg>
+          </div>
+          <h3 class="font-serif" style="font-size:22px;font-weight:700;color:var(--accent);margin:0 0 8px;line-height:1.3;">
+            Arquétipo 7
+          </h3>
+          <p style="color:var(--text2);font-weight:600;margin:0 0 10px;font-size:16px;line-height:1.4;">
+            <strong>Resgate o seu Brilho</strong> de volta & <strong>Volte a ser Vista</strong>
+          </p>
+          <p style="color:var(--muted);line-height:1.6;margin:0;font-size:15px;">
+            Recupere sua autoestima, abra suas asas e permita-se brilhar novamente em todas as áreas.
+          </p>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- ✅ PERGUNTA + IMAGEM 1 -->
+    <div style="text-align:center;margin-top:55px;">
+      <h3 class="font-serif" style="font-size:clamp(22px,4vw,30px);font-weight:700;color:var(--text2);margin:0 0 10px;font-style:italic;">
+        Quais arquétipos são esses?
+      </h3>
+      <p class="font-serif" style="font-size:clamp(18px,3.5vw,22px);color:var(--accent);font-weight:600;margin:0 0 18px;">
+        Descubra agora 👇
+      </p>
+      <img src="imagem 1.png" alt="Descubra quais são os arquétipos" class="arquetipos-image" onerror="this.style.display='none'">
+      <a href="https://pay.kiwify.com.br/DS20x3x" class="btn-cta" target="_blank" style="animation:none;">
+        QUERO DESCOBRIR OS ARQUÉTIPOS
+      </a>
+    </div>
+  </div>
+</section>
 
-    <!-- #################### RODAPÉ #################### -->
-    <footer class="bg-dark text-white/60 py-10 px-4 text-center text-sm">
-        <p>© 2026 O Segredo dos Arquétipos Femininos. Todos os direitos reservados.</p>
-        <p class="mt-2">Este produto não substitui acompanhamento profissional. Resultados podem variar de pessoa para pessoa.</p>
-    </footer>
+<!-- ==============================================
+     3. BÔNUS 1 - SÍMBOLOS DE PODER
+     ============================================== -->
+<section class="reveal" style="padding:75px 24px;background:var(--bg);">
+  <div style="max-width:1050px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:48px;">
+      <div class="bonus-badge" style="margin-bottom:18px;">🎁 Bônus 1 Exclusivo</div>
+      <h2 class="font-serif" style="font-size:clamp(26px,5vw,42px);font-weight:700;color:var(--text2);margin:0 0 16px;">
+        Símbolos de Poder Que Toda Mulher<br><span style="color:var(--accent);">Deveria Ativar em Sua Vida</span>
+      </h2>
+      <div class="ornament-line" style="max-width:180px;margin:0 auto 20px;"></div>
+      <p style="color:var(--muted);max-width:600px;margin:0 auto;font-size:16px;line-height:1.7;">
+        5 símbolos ancestrais que <strong style="color:var(--text2);">potencializam ainda mais</strong> 
+        sua jornada de poder, magnetismo e prosperidade.
+      </p>
+    </div>
+    
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px;">
+      
+      <!-- DIAMANTE -->
+      <div class="simbolo-card card-hover">
+        <div style="width:64px;height:64px;margin:0 auto 14px;border-radius:50%;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+            <path d="M6 3L12 2L18 3L22 8L12 22L2 8L6 3Z"/>
+            <path d="M2 8L22 8M9 3L12 13L15 3M7 8L12 22L17 8"/>
+          </svg>
+        </div>
+        <h3 class="font-serif" style="font-size:22px;color:var(--text2);margin:0 0 8px;font-weight:700;">O Diamante</h3>
+        <p style="color:var(--muted);font-size:14px;line-height:1.6;margin:0;">
+          Clareza, força interior, <strong>valor inestimável</strong> e prosperidade cristalina.
+        </p>
+      </div>
+      
+      <!-- COROA -->
+      <div class="simbolo-card card-hover">
+        <div style="width:64px;height:64px;margin:0 auto 14px;border-radius:50%;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+            <path d="M3 7L12 3L21 7L12 11L3 7Z"/>
+            <path d="M3 7L3 17L21 17L21 7"/>
+            <path d="M5 21L19 21"/>
+            <circle cx="12" cy="14" r="1.5" fill="#d4af37"/>
+          </svg>
+        </div>
+        <h3 class="font-serif" style="font-size:22px;color:var(--text2);margin:0 0 8px;font-weight:700;">A Coroa</h3>
+        <p style="color:var(--muted);font-size:14px;line-height:1.6;margin:0;">
+          Autoridade, <strong>realeza interior</strong>, liderança e conexão com o divino.
+        </p>
+      </div>
+      
+      <!-- MAÇÃ VERMELHA -->
+      <div class="simbolo-card card-hover">
+        <div style="width:64px;height:64px;margin:0 auto 14px;border-radius:50%;background:var(--accent2-soft);display:flex;align-items:center;justify-content:center;">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c41e3a" stroke-width="1.5">
+            <circle cx="12" cy="13" r="7"/>
+            <path d="M12 6L11 3M12 6L13 3M9.5 4L14.5 4"/>
+            <path d="M16 10C17 8 19 7.5 20 9"/>
+          </svg>
+        </div>
+        <h3 class="font-serif" style="font-size:22px;color:var(--text2);margin:0 0 8px;font-weight:700;">A Maçã Vermelha</h3>
+        <p style="color:var(--muted);font-size:14px;line-height:1.6;margin:0;">
+          Tentação, conhecimento, <strong>vitalidade</strong> e o poder da escolha consciente.
+        </p>
+      </div>
+      
+      <!-- CHAVE -->
+      <div class="simbolo-card card-hover">
+        <div style="width:64px;height:64px;margin:0 auto 14px;border-radius:50%;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+            <circle cx="7" cy="12" r="4"/>
+            <path d="M11 12L21 12M17 12L17 16M20 12L20 15"/>
+          </svg>
+        </div>
+        <h3 class="font-serif" style="font-size:22px;color:var(--text2);margin:0 0 8px;font-weight:700;">A Chave</h3>
+        <p style="color:var(--muted);font-size:14px;line-height:1.6;margin:0;">
+          <strong>Abertura de portas</strong>, acesso a segredos, soluções e novas oportunidades.
+        </p>
+      </div>
+      
+      <!-- 5º SEGREDO -->
+      <div class="simbolo-secreto card-hover" style="grid-column:1/-1;max-width:420px;margin:0 auto;">
+        <div style="font-size:42px;color:var(--accent);margin-bottom:10px;font-weight:700;filter:blur(4px);user-select:none;">?</div>
+        <div class="bonus-tag">🔒 Segredo Revelado Apenas no Curso</div>
+        <h3 class="font-serif" style="font-size:22px;color:var(--accent);margin:0 0 8px;font-weight:700;">
+          O 5º Símbolo Secreto
+        </h3>
+        <p style="color:var(--muted);font-size:15px;line-height:1.6;margin:0;font-style:italic;">
+          O símbolo mais poderoso de todos, que une <strong>magnetismo + prosperidade + proteção</strong>. 
+          Você só vai descobrir qual é dentro do conteúdo completo...
+        </p>
+      </div>
+      
+    </div>
+  </div>
+</section>
 
-</body>
+<!-- ==============================================
+     4. BÔNUS 2 - ANCORAMENTO ARQUETÍPICO
+     ============================================== -->
+<section class="section-bg-alt reveal" style="padding:75px 24px;position:relative;">
+  <div style="max-width:800px;margin:0 auto;">
+    <div style="text-align:center;background:linear-gradient(145deg,var(--card),var(--card2));border:2px solid var(--accent);border-radius:24px;padding:45px 30px;box-shadow:0 25px 60px rgba(0,0,0,.4);">
+      <div class="bonus-badge" style="margin-bottom:20px;">🎁 Bônus 2 Exclusivo</div>
+      <h2 class="font-serif" style="font-size:clamp(26px,5vw,40px);font-weight:700;color:var(--text2);margin:0 0 18px;line-height:1.2;">
+        Ancoramento <span style="color:var(--accent);">Arquetípico</span>
+      </h2>
+      <div class="ornament-line" style="max-width:140px;margin:0 auto 24px;"></div>
+      <p style="font-size:clamp(17px,3vw,19px);color:var(--text2);font-weight:600;margin:0 0 16px;line-height:1.5;">
+        Aprenda <strong>passo a passo na prática</strong> como potencializar <em>qualquer</em> arquétipo em sua vida.
+      </p>
+      <p style="color:var(--muted);line-height:1.75;margin:0 auto;max-width:600px;font-size:16px;">
+        Um método exclusivo para ancorar as energias arquetípicas de forma definitiva, 
+        criando resultados duradouros em <strong>magnetismo, poder pessoal e prosperidade</strong>.
+      </p>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:32px;text-align:left;">
+        <div style="padding:16px;background:var(--accent-soft);border-radius:12px;border:1px solid var(--border);">
+          <p style="margin:0;color:var(--text2);font-weight:600;">✓ Passo a passo prático</p>
+        </div>
+        <div style="padding:16px;background:var(--accent-soft);border-radius:12px;border:1px solid var(--border);">
+          <p style="margin:0;color:var(--text2);font-weight:600;">✓ Funciona para QUALQUER arquétipo</p>
+        </div>
+        <div style="padding:16px;background:var(--accent-soft);border-radius:12px;border:1px solid var(--border);">
+          <p style="margin:0;color:var(--text2);font-weight:600;">✓ Resultados duradouros</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================================
+     5. O QUE VOCÊ VAI APRENDER
+     ============================================== -->
+<section class="reveal" style="padding:75px 24px;background:var(--bg);">
+  <div style="max-width:880px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:48px;">
+      <p style="font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">Conteúdo Completo</p>
+      <h2 class="font-serif" style="font-size:clamp(26px,5vw,42px);font-weight:700;color:var(--text2);margin:0 0 16px;">
+        Tudo Isso Você Vai <span style="color:var(--accent);">Aprender</span>
+      </h2>
+      <div class="ornament-line" style="max-width:160px;margin:0 auto;"></div>
+    </div>
+    
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+      
+      <div style="padding:24px;border-left:3px solid var(--accent);background:linear-gradient(90deg,var(--accent-soft),transparent);border-radius:0 12px 12px 0;">
+        <h3 class="font-serif" style="font-size:21px;color:var(--text2);margin:0 0 10px;font-weight:700;">
+          ✦ A Profundidade dos Arquétipos
+        </h3>
+        <p style="color:var(--muted);line-height:1.7;margin:0;">
+          Aprenda sobre esses arquétipos femininos e <strong>por que eles mudam e transformam sua vida</strong> de forma potente.
+        </p>
+      </div>
+      
+      <div style="padding:24px;border-left:3px solid var(--accent2);background:linear-gradient(90deg,var(--accent2-soft),transparent);border-radius:0 12px 12px 0;">
+        <h3 class="font-serif" style="font-size:21px;color:var(--text2);margin:0 0 10px;font-weight:700;">
+          ✦ Ativação Energética
+        </h3>
+        <p style="color:var(--muted);line-height:1.7;margin:0;">
+          Aprenda sobre <strong>como ativar as energias</strong> em sua vida, criando alinhamento real entre seu ser e o mundo.
+        </p>
+      </div>
+      
+      <div style="padding:24px;border-left:3px solid var(--accent);background:linear-gradient(90deg,var(--accent-soft),transparent);border-radius:0 12px 12px 0;">
+        <h3 class="font-serif" style="font-size:21px;color:var(--text2);margin:0 0 10px;font-weight:700;">
+          ✦ Decretos Poderosos
+        </h3>
+        <p style="color:var(--muted);line-height:1.7;margin:0;">
+          <strong>Decretos poderosos de ativação e ancoramento</strong> para você usar diariamente e potencializar cada energia.
+        </p>
+      </div>
+      
+      <div style="padding:24px;border-left:3px solid var(--accent2);background:linear-gradient(90deg,var(--accent2-soft),transparent);border-radius:0 12px 12px 0;">
+        <h3 class="font-serif" style="font-size:21px;color:var(--text2);margin:0 0 10px;font-weight:700;">
+          ✦ Combinações Mágicas
+        </h3>
+        <p style="color:var(--muted);line-height:1.7;margin:0;">
+          Aprenda a fazer a <strong>melhor combinação desses arquétipos</strong> para transformar sua vida de forma extraordinária.
+        </p>
+      </div>
+      
+    </div>
+    
+    <div style="margin-top:40px;padding:24px 20px;background:var(--card);border:1px solid var(--border);border-radius:14px;text-align:center;">
+      <p style="color:var(--text2);font-weight:600;margin:0;font-size:16px;">
+        📹 <strong>Aulas gravadas online</strong> &nbsp;·&nbsp; ⚡ <strong>Acesso imediato</strong> &nbsp;·&nbsp; 👩 Assista quando e onde quiser
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================================
+     6. OFERTA FINAL
+     ============================================== -->
+<section id="oferta" class="reveal" style="padding:80px 24px;position:relative;overflow:hidden;background:
+  radial-gradient(ellipse at 50% 0%,rgba(212,175,55,.15) 0%,transparent 50%),
+  radial-gradient(ellipse at 50% 100%,rgba(155,28,63,.2) 0%,transparent 50%),
+  var(--bg);">
+  
+  <div style="max-width:620px;margin:0 auto;position:relative;z-index:1;">
+    <div style="text-align:center;background:linear-gradient(145deg,var(--card),var(--card2));border:2px solid var(--accent);border-radius:24px;padding:45px 26px;box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 60px rgba(212,175,55,.12);">
+      
+      <div style="display:inline-block;background:var(--accent);color:#1a0a14;padding:6px 22px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;">
+        Oferta Especial Por Tempo Limitado
+      </div>
+      
+      <h2 class="font-serif" style="font-size:clamp(26px,5vw,38px);font-weight:700;color:var(--text2);margin:0 0 14px;line-height:1.2;">
+        Tudo Isso Por Apenas
+      </h2>
+      
+      <div class="ornament-line" style="max-width:140px;margin:0 auto 22px;"></div>
+      
+      <p class="valor-riscado" style="font-size:17px;margin:0 0 6px;">De R$ 497,00</p>
+      <p style="color:var(--accent);font-size:17px;margin:0 0 6px;font-weight:600;">Por apenas</p>
+      
+      <div class="font-serif" style="font-size:clamp(54px,11vw,72px);font-weight:700;color:var(--text2);line-height:1;margin-bottom:6px;">
+        R$ 127<span style="font-size:clamp(22px,5vw,28px);color:var(--muted);">,90</span>
+      </div>
+      
+      <p style="color:var(--muted);font-size:16px;margin:0 0 30px;">
+        ou em até <strong style="color:var(--text2);">12x de R$ 13,24</strong>
+      </p>
+      
+      <a href="https://pay.kiwify.com.br/DS20x3x" class="btn-cta" target="_blank" style="width:100%;max-width:340px;display:inline-block;">
+        ✨ QUERO GARANTIR MEU ACESSO
+      </a>
+      
+      <p style="margin-top:22px;font-size:13px;color:var(--muted);letter-spacing:.3px;">
+        🔒 Pagamento 100% seguro &nbsp;·&nbsp; ⚡ Acesso liberado na hora
+      </p>
+      
+      <p class="font-serif" style="margin-top:22px;font-size:17px;color:var(--accent);font-style:italic;line-height:1.4;">
+        "Sua transformação começa no momento em que você decide não mais esperar."
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================================
+     FOOTER
+     ============================================== -->
+<footer style="padding:40px 24px;background:#0d0509;border-top:1px solid var(--border2);">
+  <div style="max-width:800px;margin:0 auto;text-align:center;">
+    <div class="divider-ornament" style="margin-bottom:18px;">
+      <div class="line"></div>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+        <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z"/>
+      </svg>
+      <div class="line"></div>
+    </div>
+    <p class="font-serif" style="font-size:17px;color:var(--accent);margin:0 0 8px;font-style:italic;line-height:1.4;">
+      "Uma mulher que conhece seu próprio poder é imparável."
+    </p>
+    <p style="color:var(--muted);font-size:12px;margin:18px 0 0;opacity:.7;">
+      © 2026 O Segredo dos Arquétipos Femininos &middot; Todos os direitos reservados
+    </p>
+  </div>
+</footer>
+
+</div>
 </html>
